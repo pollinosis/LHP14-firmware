@@ -60,70 +60,62 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 
 void render_layer(void) {
-	
-	oled_set_cursor(START_COL, START_ROW);
+
+    oled_set_cursor(START_COL, START_ROW);
     // Host Keyboard Layer Status
     oled_write_P(PSTR("Layer: "), false);
 
     switch (get_highest_layer(layer_state)) {
         case SAM:
             oled_write_P(PSTR("SAMURAI\n"), false);
-              #ifdef RGBLIGHT_ENABLE
-                rgblight_sethsv(0, 255, 180);
-              #endif
+            rgblight_sethsv(0, 255, 180);
             break;
+            
         case SCH:
             oled_write_P(PSTR("SCHOLAR\n"), false);
-              #ifdef RGBLIGHT_ENABLE
-                rgblight_sethsv(20, 255, 210);
-              #endif
+            rgblight_sethsv(20, 255, 210);
             break;
+            
         case DRG:
             oled_write_P(PSTR("DRAGOON\n"), false);
-              #ifdef RGBLIGHT_ENABLE
-                rgblight_sethsv(170, 255, 180);
-              #endif
+            rgblight_sethsv(170, 255, 180);
             break;
+            
         case DRK:
             oled_write_P(PSTR("DARK KNIGHT\n"), false);
-              #ifdef RGBLIGHT_ENABLE
-                rgblight_sethsv(0, 255, 90);
-              #endif
+            rgblight_sethsv(0, 255, 90);
             break;
+            
         case WAR:
             oled_write_P(PSTR("WARRIOR\n"), false);
-              #ifdef RGBLIGHT_ENABLE
-                rgblight_sethsv(85, 255, 90);
-              #endif
-            break;            
+            rgblight_sethsv(85, 255, 90);
+            break;
+            
         case DNC:
             oled_write_P(PSTR("DANCER\n"), false);
-              #ifdef RGBLIGHT_ENABLE
-                rgblight_sethsv(213, 255, 180);
-              #endif
-            break;            
+            rgblight_sethsv(213, 255, 180);
+            break;
+            
         case WHM:
             oled_write_P(PSTR("WHITE MAGE\n"), false);
-              #ifdef RGBLIGHT_ENABLE
-                rgblight_sethsv(11, 176, 180);
-              #endif
+            rgblight_sethsv(11, 176, 180);
             break;
+            
         case RDM:
             oled_write_P(PSTR("RED MAGE\n"), false);
-              #ifdef RGBLIGHT_ENABLE
-                rgblight_sethsv(0, 255, 220);
-              #endif
-            break;            
+            rgblight_sethsv(0, 255, 220);
+            break;
+            
         case NIN:
             oled_write_P(PSTR("NINJA\n"), false);
-              #ifdef RGBLIGHT_ENABLE
-                rgblight_sethsv(191, 255, 150);
-              #endif
+            rgblight_sethsv(191, 255, 150);
             break;
+            
         case RGB:
             oled_write_P(PSTR("RGB LED TEST\n"), false);
             break;     
         default:
+        
             // Or use the write_ln shortcut over adding '\n' to the end of your string
             oled_write_ln_P(PSTR("Undefined"), false);
     }
@@ -398,9 +390,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
+
 void joystick_task(){
 
-		joystick_status.axes[0] = analogReadPin(F4)/4 - 128;
-		joystick_status.axes[1] = analogReadPin(D4)/4 - 128;
-		send_joystick_packet(&joystick_status);
+    joystick_status.axes[0] = analogReadPin(F4)/4 - 128;
+    joystick_status.axes[1] = analogReadPin(D4)/4 - 128;
+    send_joystick_packet(&joystick_status);
 }
+
+
+
