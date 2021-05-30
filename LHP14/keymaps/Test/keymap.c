@@ -70,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* TST
    * ,------------------------------------------------.   
-   * |  Q   |   W  |   E  |   R  |   T  |   Y  |   U  |   
+   * |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   
    * |------+------+------+------+------+------+------|   
    * |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   
    * |------+------+------+------+------+------+------|   
@@ -102,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,------------------------------------------------.   
    * |RGBTOG|RGBHUI|RGBHUD|RGBSAI|RGBSAD|RGBVAI|RGBVAD|   
    * |------+------+------+------+------+------+------|   
-   * |RGBMOD|RGBRST|      |      |      |      |   
+   * |RGBMOD|RGBRST|      |      |      |      |      |   
    * |------+------+------+------+------+------+------|   
    * |      |      |      |      |      |      |JSPush|   
    * |------+------+------+------+------+-------------'   
@@ -126,7 +126,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void joystick_task(){
 
-		joystick_status.axes[0] = analogReadPin(F4)/4 - 128;
-		joystick_status.axes[1] = analogReadPin(D4)/4 - 128;
-        send_joystick_packet(&joystick_status);
+    joystick_status.axes[0] = analogReadPin(F4)/4 - 128;
+    joystick_status.axes[1] = analogReadPin(D4)/4 - 128;
+    send_joystick_packet(&joystick_status);
 }
