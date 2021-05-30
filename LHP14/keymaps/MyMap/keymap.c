@@ -708,7 +708,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,------------------------------------------------.   
    * |RGBTOG|RGBHUI|RGBHUD|RGBSAI|RGBSAD|RGBVAI|RGBVAD|   
    * |------+------+------+------+------+------+------|   
-   * |RGBMOD|RGBRST|Space |À¹Þ‘Ö |À¹Þ‹ß |      |      |   
+   * |RGBMOD|RGBRST|      |      |      |      |      |   
    * |------+------+------+------+------+------+------|   
    * |      |      |      |      |      |      |JSPush|   
    * |------+------+------+------+------+-------------'   
@@ -722,7 +722,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [RGB] = LAYOUT( \
     RGB_TOG,   RGB_HUI,   RGB_HUD,    RGB_SAI,    RGB_SAD,    RGB_VAI,    RGB_VAD,     \
-    RGB_MOD,   RGBRST,    KC_SPC,     KC_F,       KC_T,       XXXXXXX,    XXXXXXX,     \
+    RGB_MOD,   RGBRST,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,     \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    JS_BUTTON7,  \
     TO(DRK),   XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX,                             \
                                                               XXXXXXX,                 \
