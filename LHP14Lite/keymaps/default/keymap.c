@@ -178,15 +178,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------|   
    * |   A  |Space |À¹Þ‘Ö |À¹Þ‹ß |¼Þ¬ÝÌß|   
    * |------+------+------+------+------|   
-   * |—³’Ü”ö|‘“—³ŒŒ|±ÑÚÝ  |DÀÞ²ÌÞ| –ò1  |   
+   * |      |‘“—³ŒŒ|±ÑÚÝ  |DÀÞ²ÌÞ| –ò1  |   
    * |------+------+------+------+------|   
    * |DRK   |      |   S  |²Ù°¼ÌÞ|ØÀÆ°  |   
    * `----------------------------------'   
    */
   [DRG] = LAYOUT( \
-    KC_F3,    KC_W,       LALT(KC_1), KC_EQUAL,   KC_D,      \
+    KC_Z,     KC_W,       LALT(KC_1), KC_EQUAL,   KC_D,      \
     KC_A,     KC_SPC,     KC_F,       KC_T,       KC_MINUS,  \
-    RR_RD,    LALT(KC_9), KC_ASTR,    KC_0,       LCA(KC_0), \
+    XXXXXXX,  LALT(KC_9), KC_ASTR,    KC_0,       LCA(KC_0), \
     TO(DRK),  XXXXXXX,    KC_S,       LALT(KC_7), LALT(KC_6),     JS_BUTTON7 \
   ),
 
